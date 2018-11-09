@@ -3,7 +3,10 @@ declare(strict_types=1);
 
 namespace Tests;
 
+require_once(__DIR__ . "/../src/OutputSecretSanta.php");
+
 use PHPUnit\Framework\TestCase;
+use SecretSanta\OutputSecretSanta;
 
 final class OutputSecretSantaTest extends TestCase
 {
