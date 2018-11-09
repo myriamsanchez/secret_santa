@@ -17,8 +17,7 @@ class InputSecretSanta implements Input
         $file = fopen($this->filePath, "r") or exit("Can't open $this->filePath");
         while (($line = fgets($file)) !== false) {
             $line = trim($line);
-            echo strtolower($line) . "\n";
-            if (($this->isParticipantRepeated($secretSanta, $line))
+            if (($this->isParticipantRepeated(array_map('strtolower',$secretSanta), strtolower($line)))
                 || ($this->lineHasMultipleParticipants(strtolower($line)))) {
                 echo 'File contains duplicated data or has multiple participants in one line';
                 return [];

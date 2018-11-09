@@ -76,8 +76,8 @@ class GameSecretSanta implements Game
                 }
                 $partnersList[$participant] = $possiblePartners[$id];
 
-                $assignedParner = array_search($possiblePartners[$id], $unassignedParticipants);
-                array_splice($unassignedParticipants, $assignedParner, 1);
+                $assignedPartner = array_search($possiblePartners[$id], $unassignedParticipants);
+                array_splice($unassignedParticipants, $assignedPartner, 1);
             }
         }
         return $partnersList;
